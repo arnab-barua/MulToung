@@ -1,0 +1,83 @@
+﻿<Window x:Class="MulToung.WordCatagory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MulToung"
+        mc:Ignorable="d"
+        Title="Dansk"
+        Background="#2F0101"
+        WindowState="Maximized">
+    <Grid Margin="20,5,20,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <DataGrid Name="wordList" Grid.RowSpan="3" Grid.ColumnSpan="2" Background="#F0E68C" AutoGenerateColumns="False" CanUserAddRows="False" AlternatingRowBackground="#f5f5f5" CanUserReorderColumns="False" IsReadOnly="True" SelectionChanged="change" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Word Id" Binding="{Binding Word_Id}" />
+                <DataGridTextColumn Header="Type Id" Binding="{Binding Cat_Id}" />
+                <DataGridTextColumn Header="Word" Width="115" Foreground="#8A2BE2" FontWeight="Bold" Binding="{Binding Word}" />
+                <DataGridTextColumn Header="Singular/Present" Width="115" FontWeight="Bold" Binding="{Binding singular}" />
+                <DataGridTextColumn Header="Indefinite/Past" Width="115" FontWeight="Bold" Binding="{Binding indef_singular}" />
+                <DataGridTextColumn Header="Definite/Future" Width="115" FontWeight="Bold" Binding="{Binding def_singular}" />
+                <DataGridTextColumn Header="Plural" Width="100" Binding="{Binding plural}" />
+                <DataGridTextColumn Header="Definite" Width="100" Binding="{Binding def_plural}" />
+                <DataGridTextColumn Header="Note" Width="110" Binding="{Binding note}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid Name="grdCatagory" Grid.Column="2" Grid.RowSpan="3" AutoGenerateColumns="False" CanUserAddRows="False" Margin="15,0,0,0" AlternatingRowBackground="#f5f5f5" CanUserReorderColumns="False" IsReadOnly="True" SelectionChanged="change2" FontSize="15" FontFamily="Tahoma">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Type ID" Binding="{Binding Cat_Id}"/>
+                <DataGridTextColumn Header="Word Type" Width="150" Foreground="#8B4513" FontWeight="Bold" Binding="{Binding Cat_Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Background="YellowGreen" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,3,0,0">
+            <Label x:Name="Word_d" Content="Word Id" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.143,0.099" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="wordIdTxt" HorizontalAlignment="Left" Height="23" Margin="80,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+            <Label Content="Word" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="wordTxt" HorizontalAlignment="Left" Height="23" Margin="80,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Singular/Present" HorizontalAlignment="Left" Margin="220,15,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="singularTxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="350,18,0,0"/>
+            <Label Content="Indefinite/Past" HorizontalAlignment="Left" Margin="220,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.167,-1.28" FontSize="14" FontWeight="Bold"/>
+            <TextBox x:Name="indefSingularTxt" HorizontalAlignment="Left" Height="23" Margin="350,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+            <TextBox x:Name="defSingularTxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="350,78,0,0"/>
+            <TextBox x:Name="catIdTxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="590,78,0,0">
+
+            </TextBox>
+            <Button x:Name="wordInsert" Content="Insert" HorizontalAlignment="Left" Margin="320,130,0,0" VerticalAlignment="Top" Width="75" Click="wordInsert_Click" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Plural" HorizontalAlignment="Left" Margin="520,15,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Definite" HorizontalAlignment="Left" Margin="520,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.389,1.693" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Type Id" HorizontalAlignment="Left" Margin="520,75,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="pluralTxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="590,18,0,0"/>
+            <TextBox x:Name="defPluralTxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="590,48,0,0"/>
+            <Label Content="Notes" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="noteTxt" HorizontalAlignment="Left" Height="70" Margin="80,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+            <Button x:Name="wordUpdate" Content="Update" HorizontalAlignment="Left" Margin="420,130,0,0" VerticalAlignment="Top" Width="75" Click="wordUpdate_Click" FontWeight="Bold" FontSize="14"/>
+            <Button x:Name="wordDelete" Content="Delete" HorizontalAlignment="Left" Margin="520,130,0,0" VerticalAlignment="Top" Width="75" Click="wordDelete_Click" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Definite/Future" HorizontalAlignment="Left" Margin="220,75,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        </Grid>
+
+        <Grid Background="#4C9900" Grid.Row="3" Grid.Column="2" Margin="15,3,0,0">
+            <Label Content="Type Id" HorizontalAlignment="Left" Margin="80,15,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+            <TextBox x:Name="typeIdTxt" HorizontalAlignment="Left" Height="23" Margin="180,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" IsEnabled="False"/>
+            <Label Content="Word Type" HorizontalAlignment="Left" Margin="80,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.348,-0.835" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="wordTypeTxt" HorizontalAlignment="Left" Height="23" Margin="180,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+            <Button x:Name="typeCreate" Content="Create" HorizontalAlignment="Left" Margin="70,98,0,0" VerticalAlignment="Top" Width="75" Click="typeCreate_Click" FontSize="14" FontWeight="Bold"/>
+            <Button x:Name="typeUpdate" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="150,98,0,0" Click="typeUpdate_Click" FontWeight="Bold" FontSize="14"/>
+            <Button x:Name="typeDelete" Content="Delete" HorizontalAlignment="Left" Margin="230,98,-38,0" VerticalAlignment="Top" Width="75" Click="typeDelete_Click" FontWeight="Bold" FontSize="14"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\bin\Debug\MulToung.exe.config
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\MulToung.csprojResolveAssemblyReference.cache
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\WordCatagory.g.cs
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\App.g.cs
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\MulToung_MarkupCompile.cache
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\MulToung_MarkupCompile.lref
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\bin\Debug\MulToung.exe
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\bin\Debug\MulToung.pdb
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\WordCatagory.baml
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\MulToung.g.resources
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\MulToung.Properties.Resources.resources
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\MulToung.csproj.GenerateResource.Cache
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\MulToung.exe
+c:\users\jitu\documents\visual studio 2015\Projects\MulToung\MulToung\obj\Debug\MulToung.pdb
