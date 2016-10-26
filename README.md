@@ -6,4 +6,7 @@ Basic Words :
 ![Basic_Words](https://github.com/arnab-barua/MulToung/blob/master/Basic_Words.JPG)
 
 Selecting Word in the list : 
-![Basic_Words](https://github.com/arnab-barua/MulToung/blob/master/Word_Select_in_list.JPG)
+![Word_select](https://github.com/arnab-barua/MulToung/blob/master/Word_Select_in_list.JPG)
+
+Words in the word catagory Foods : 
+![Foods](https://github.com/arnab-barua/MulToung/blob/master/Foods_catagory.JPG)
